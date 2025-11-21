@@ -38,7 +38,17 @@ export default async function BookPage({ params }: PageProps) {
                             <div className="flex items-center gap-4">
                                 <BackButton />
                             </div>
-                            <MinimalCover title={book.title} className="w-full aspect-[3/4] shadow-sm" />
+                            {book.coverImage ? (
+                                <div className="w-full aspect-[3/4] relative shadow-sm overflow-hidden rounded-sm">
+                                    <img
+                                        src={book.coverImage}
+                                        alt={`Cover of ${book.title}`}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                            ) : (
+                                <MinimalCover title={book.title} className="w-full aspect-[3/4] shadow-sm" />
+                            )}
 
                             <div className="flex flex-col gap-6 border-t border-divider pt-6">
                                 <div className="grid grid-cols-2 gap-4">

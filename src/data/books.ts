@@ -13,6 +13,7 @@ export interface Book {
     tags: string[];
     publishedYear: number;
     chapters: Chapter[];
+    coverImage?: string;
 }
 
 export const books: Book[] = [
@@ -24,6 +25,7 @@ export const books: Book[] = [
         description: "Plato's best-known work and one of the world's most influential works of philosophy and political theory, both intellectually and historically.",
         tags: ["Philosophy", "Politics", "Classic"],
         publishedYear: -375,
+        coverImage: "/images/covers/the-republic.png",
         chapters: [
             {
                 id: "chapter-1",
@@ -69,6 +71,7 @@ export const books: Book[] = [
         description: "A series of personal writings by Marcus Aurelius, Roman Emperor from 161 to 180 AD, recording his private notes to himself and ideas on Stoic philosophy.",
         tags: ["Stoicism", "Philosophy", "Self-Help"],
         publishedYear: 180,
+        coverImage: "/images/covers/meditations.png",
         chapters: [
             {
                 id: "chapter-1",
@@ -105,6 +108,7 @@ export const books: Book[] = [
         description: "Nietzsche accuses past philosophers of lacking critical sense and blindly accepting dogmatic premises in their consideration of morality.",
         tags: ["Philosophy", "Existentialism"],
         publishedYear: 1886,
+        coverImage: "/images/covers/beyond-good-and-evil.png",
         chapters: [
             {
                 id: "chapter-1",
@@ -127,9 +131,10 @@ export const books: Book[] = [
         slug: "the-prince",
         title: "The Prince",
         author: "Niccolò Machiavelli",
-        description: "A 16th-century political treatise by the Italian diplomat and political theorist Niccolò Machiavelli.",
-        tags: ["Politics", "History", "Classic"],
+        description: "Machiavelli's 16th-century political treatise on how to acquire and maintain political power, often associated with the term 'Machiavellian'.",
+        tags: ["Politics", "Philosophy", "Classic"],
         publishedYear: 1532,
+        coverImage: "/images/covers/the-prince.png",
         chapters: [
             {
                 id: "chapter-1",
@@ -155,9 +160,10 @@ export const books: Book[] = [
         slug: "the-art-of-war",
         title: "The Art of War",
         author: "Sun Tzu",
-        description: "An ancient Chinese military treatise dating from the Late Spring and Autumn Period. The work, which is attributed to the ancient Chinese military strategist Sun Tzu, is composed of 13 chapters.",
+        description: "An ancient Chinese military treatise dating from the Late Spring and Autumn Period, attributed to the ancient Chinese military strategist Sun Tzu.",
         tags: ["Strategy", "Philosophy", "Classic"],
         publishedYear: -500,
+        coverImage: "/images/covers/art-of-war.png",
         chapters: [
             {
                 id: "chapter-1",
@@ -182,9 +188,10 @@ export const books: Book[] = [
         slug: "tao-te-ching",
         title: "Tao Te Ching",
         author: "Laozi",
-        description: "A fundamental text for both philosophical and religious Taoism. It also strongly influenced other schools of Chinese philosophy and religion, including Legalism, Confucianism, and Chinese Buddhism.",
-        tags: ["Philosophy", "Religion", "Classic"],
+        description: "A fundamental text for both philosophical and religious Taoism, strongly influencing other schools of Chinese philosophy and religion.",
+        tags: ["Philosophy", "Spirituality", "Classic"],
         publishedYear: -400,
+        coverImage: "/images/covers/tao-te-ching.png",
         chapters: [
             {
                 id: "chapter-1",
@@ -209,9 +216,10 @@ export const books: Book[] = [
         slug: "critique-of-pure-reason",
         title: "Critique of Pure Reason",
         author: "Immanuel Kant",
-        description: "The Critique of Pure Reason is a book by the German philosopher Immanuel Kant, in which the author seeks to determine the limits and scope of metaphysics.",
+        description: "Kant's primary work, aimed at determining the limits and scope of metaphysics, often considered the culmination of early modern philosophy.",
         tags: ["Philosophy", "Epistemology", "Classic"],
         publishedYear: 1781,
+        coverImage: "/images/covers/critique-of-pure-reason.png",
         chapters: [
             {
                 id: "chapter-1",
@@ -235,9 +243,10 @@ export const books: Book[] = [
         slug: "leviathan",
         title: "Leviathan",
         author: "Thomas Hobbes",
-        description: "Leviathan or The Matter, Forme and Power of a Common-Wealth Ecclesiasticall and Civil, commonly referred to as Leviathan, is a book written by Thomas Hobbes and published in 1651.",
+        description: "Hobbes's most famous work, which concerns the structure of society and legitimate government, and is regarded as one of the earliest and most influential examples of social contract theory.",
         tags: ["Politics", "Philosophy", "Classic"],
         publishedYear: 1651,
+        coverImage: "/images/covers/leviathan.png",
         chapters: [
             {
                 id: "chapter-13",
@@ -261,9 +270,10 @@ export const books: Book[] = [
         slug: "communist-manifesto",
         title: "The Communist Manifesto",
         author: "Karl Marx & Friedrich Engels",
-        description: "The Communist Manifesto, originally the Manifesto of the Communist Party, is an 1848 political pamphlet by the German philosophers Karl Marx and Friedrich Engels.",
-        tags: ["Politics", "History", "Classic"],
+        description: "A political pamphlet by German philosophers Karl Marx and Friedrich Engels, commissioning the Communist League and presenting an analytical approach to the class struggle.",
+        tags: ["Politics", "Philosophy", "Classic"],
         publishedYear: 1848,
+        coverImage: "/images/covers/communist-manifesto.png",
         chapters: [
             {
                 id: "chapter-1",
