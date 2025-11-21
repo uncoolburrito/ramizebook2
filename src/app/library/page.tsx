@@ -17,7 +17,7 @@ export default function LibraryPage() {
         { slug: "critique-of-pure-reason", width: "13%", title: "Critique of Pure Reason" },
         { slug: "leviathan", width: "9.5%", title: "Leviathan" },
         { slug: null, width: "2.5%", title: "" }, // Spacer/Unknown book
-        { slug: "the-communist-manifesto", width: "14.5%", title: "The Communist Manifesto" },
+        { slug: "communist-manifesto", width: "14.5%", title: "The Communist Manifesto" },
     ];
 
     return (
