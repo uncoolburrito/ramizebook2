@@ -9,6 +9,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Card } from "@/components/ui/Card";
+import { BackButton } from "@/components/ui/BackButton";
 
 export default function RegisterPage() {
     const router = useRouter();
@@ -66,9 +67,16 @@ export default function RegisterPage() {
         <div className="min-h-screen flex flex-col bg-background transition-colors duration-300">
             <Header />
 
+
+
+
+
             <main className="flex-grow flex items-center justify-center px-6 py-32">
                 <FadeIn className="w-full max-w-md">
                     <Card className="p-8 border-divider bg-background/50 backdrop-blur-sm">
+                        <div className="mb-6">
+                            <BackButton />
+                        </div>
                         <div className="text-center mb-8">
                             <h1 className="font-display font-bold text-2xl mb-2">Create Account</h1>
                             <p className="text-sm text-secondary-text">

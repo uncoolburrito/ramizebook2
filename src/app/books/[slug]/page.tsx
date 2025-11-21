@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Tag } from "@/components/ui/Tag";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { BackButton } from "@/components/ui/BackButton";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -28,8 +29,15 @@ export default async function BookPage({ params }: PageProps) {
             <main className="flex-grow pt-32 px-6 md:px-12 pb-20">
                 <FadeIn className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-12 lg:gap-24">
+
+
+
+
                         {/* Left Column: Cover & Metadata */}
                         <div className="flex flex-col gap-8">
+                            <div className="flex items-center gap-4">
+                                <BackButton />
+                            </div>
                             <MinimalCover title={book.title} className="w-full aspect-[3/4] shadow-sm" />
 
                             <div className="flex flex-col gap-6 border-t border-divider pt-6">

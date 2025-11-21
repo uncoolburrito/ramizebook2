@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { BackButton } from "@/components/ui/BackButton";
 
 export default function LibraryPage() {
     // Configuration for the visual books in the image
@@ -24,8 +25,13 @@ export default function LibraryPage() {
         <div className="min-h-screen flex flex-col bg-[#f0f0f0] dark:bg-[#1a1a1a]">
             <Header />
 
+
+
             <main className="flex-grow flex items-center justify-center px-4 md:px-12 py-32 overflow-hidden">
                 <FadeIn className="w-full max-w-7xl">
+                    <div className="mb-8">
+                        <BackButton />
+                    </div>
                     <div className="relative w-full shadow-2xl rounded-sm overflow-hidden bg-neutral-100">
                         {/* The Image */}
                         <img

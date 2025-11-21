@@ -5,6 +5,7 @@ import { ReaderToolbar } from "@/components/reader/ReaderToolbar";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { BackButton } from "@/components/ui/BackButton";
 
 interface PageProps {
     params: Promise<{ slug: string; chapter: string }>;
@@ -32,8 +33,19 @@ export default async function ReaderPage({ params }: PageProps) {
                 bookSlug={book.slug}
             />
 
+
+
+
+
             <ReaderShell>
-                <div className="mb-12 text-center">
+                <div className="mb-12 text-center relative">
+                    <div className="absolute left-0 top-0 md:-ml-16 hidden md:block">
+                        <BackButton />
+                    </div>
+                    <div className="md:hidden mb-4 flex justify-center">
+                        <BackButton />
+                    </div>
+
                     <span className="text-xs text-secondary-text uppercase tracking-wider font-medium mb-2 block">
                         Chapter {chapterIndex + 1}
                     </span>

@@ -1,14 +1,22 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { BackButton } from "@/components/ui/BackButton";
 
 export default function LicensePage() {
     return (
         <div className="min-h-screen flex flex-col bg-background transition-colors duration-300">
             <Header />
 
+
+
+
+
             <main className="flex-grow px-6 md:px-12 py-32">
                 <FadeIn className="max-w-3xl mx-auto">
+                    <div className="mb-8">
+                        <BackButton />
+                    </div>
                     <h1 className="font-display font-bold text-4xl mb-12">License</h1>
 
                     <div className="space-y-12 text-secondary-text leading-relaxed">
@@ -82,28 +90,13 @@ export default function LicensePage() {
 
                         {/* Section 4 */}
                         <section>
-                            <h2 className="font-display font-bold text-xl text-foreground mb-4">4. Image & Asset Attribution</h2>
-                            <p className="mb-4">
-                                If using any placeholder covers or decorative assets from Unsplash:
-                            </p>
-                            <ul className="list-disc pl-5 space-y-2">
-                                <li>
-                                    Images used in this project may come from Unsplash and are covered under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">Unsplash License</a>.
-                                </li>
-                                <li>These images are for demonstration purposes only.</li>
-                            </ul>
-                            <p className="mt-2 text-sm italic opacity-70">If you replace them with your own covers → delete this section.</p>
-                        </section>
-
-                        {/* Section 5 */}
-                        <section>
                             <h2 className="font-display font-bold text-xl text-foreground mb-4">5. No Legal Advice</h2>
                             <p>
                                 This page is for informational purposes only. It does not constitute legal advice.
                             </p>
                         </section>
 
-                        {/* Section 6 */}
+                        {/* Section 5 */}
                         <section>
                             <h2 className="font-display font-bold text-xl text-foreground mb-4">6. Contact</h2>
                             <p>
