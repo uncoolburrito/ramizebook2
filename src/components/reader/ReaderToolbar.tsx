@@ -16,11 +16,8 @@ export function ReaderToolbar({ bookTitle, chapterTitle, bookSlug }: ReaderToolb
             <ReadingProgress />
             <div className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b border-divider h-14 flex items-center px-4 md:px-8 justify-between transition-colors duration-300">
                 <div className="flex items-center gap-4">
-                    <Link href={`/books/${bookSlug}`}>
-                        <Button variant="ghost" size="sm" className="px-2">
-                            <ArrowLeft className="h-4 w-4 mr-2" />
-                            <span className="hidden sm:inline">Back</span>
-                        </Button>
+                    <Link href="/" className="font-display font-bold text-lg tracking-tight">
+                        AZERO<span className="text-accent">.</span>BOOKS
                     </Link>
                     <div className="h-4 w-px bg-divider mx-2" />
                     <div className="flex flex-col">
