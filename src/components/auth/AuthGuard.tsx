@@ -10,7 +10,7 @@ export function AuthGuard({ children }: { children: React.ReactNode }) {
 
     React.useEffect(() => {
         // Public paths that don't require auth
-        const publicPaths = ["/login", "/register", "/license", "/about"];
+        const publicPaths = ["/login", "/register", "/license", "/about", "/terms", "/privacy", "/cancellation"];
 
         // Check if current path is public
         const isPublicPath = publicPaths.some(path => pathname === path || pathname.startsWith(path + "/"));
