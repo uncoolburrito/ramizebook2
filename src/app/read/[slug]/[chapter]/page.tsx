@@ -1,4 +1,5 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { cookies } from "next/headers";
 import { books } from "@/data/books";
 import { ReaderShell } from "@/components/reader/ReaderShell";
 import { ReaderToolbar } from "@/components/reader/ReaderToolbar";
@@ -13,6 +14,14 @@ interface PageProps {
 
 export default async function ReaderPage({ params }: PageProps) {
     const { slug, chapter: chapterId } = await params;
+
+    const cookieStore = await cookies();
+    const hasPaid = cookieStore.get("ebook_access")?.value === "true";
+
+    if (!hasPaid) {
+        redirect(`/books/${slug}`);
+    }
+
     const book = books.find((b) => b.slug === slug);
 
     if (!book) notFound();

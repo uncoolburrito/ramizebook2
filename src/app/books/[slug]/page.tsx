@@ -9,6 +9,8 @@ import { Tag } from "@/components/ui/Tag";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { BackButton } from "@/components/ui/BackButton";
+import { cookies } from "next/headers";
+import { PaymentButton } from "@/components/payment/PaymentButton";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -16,6 +18,8 @@ interface PageProps {
 
 export default async function BookPage({ params }: PageProps) {
     const { slug } = await params;
+    const cookieStore = await cookies();
+    const hasPaid = cookieStore.get("ebook_access")?.value === "true";
     const book = books.find((b) => b.slug === slug);
 
     if (!book) {
@@ -84,11 +88,15 @@ export default async function BookPage({ params }: PageProps) {
                             </p>
 
                             <div className="flex items-center gap-4 mb-16">
-                                <Link href={`/read/${book.slug}/${book.chapters[0].id}`}>
-                                    <Button size="lg" className="gap-2">
-                                        Start Reading <ArrowRight className="w-4 h-4" />
-                                    </Button>
-                                </Link>
+                                {hasPaid ? (
+                                    <Link href={`/read/${book.slug}/${book.chapters[0].id}`}>
+                                        <Button size="lg" className="gap-2">
+                                            Start Reading <ArrowRight className="w-4 h-4" />
+                                        </Button>
+                                    </Link>
+                                ) : (
+                                    <PaymentButton />
+                                )}
                             </div>
 
                             <div className="border-t border-divider">
